@@ -67,9 +67,9 @@ Chú ý là `myCallbackFunctionName` sẽ được gọi trong __block__ tới c
 
 ## Icetea gate nodes
 
-Icetea gate nodes chạy độc lập với Icetea blockchain nodes, sẽ liên tục monitor `system.gate` contract. Khi có event, nó sẽ thực hiện query offchain data theo yêu cầu, sau đó gọi callback function để cung cấp offchain data cho contract.
+Icetea gate nodes chạy độc lập với Icetea blockchain nodes, sẽ liên tục monitor `system.gate` contract. Khi có request (dưới dạng event), nó sẽ thực hiện query offchain data theo yêu cầu, sau đó gọi callback function để cung cấp offchain data cho contract.
 
-Mục tiêu của Icetea là cung cấp offchain data 1 cách _decentralized_, nên các gate nodes này sẽ là 1 mạng lưới được quản lý 1 cách decentralized và có incentive cho việc cung cấp data. Đối với mỗi node lại có 1 danh sách các datasources. Cùng 1 loại dữ liệu có thể có nhiều nguồn data để so sánh với nhau. Các nodes cũng như các datasources sẽ được dánh giá điểm tín nhiệm (reputation) bằng hệ thống sao (rating). Người đánh giá cần được verify bằng hệ thống digital identity của Icetea.
+Mục tiêu của Icetea là cung cấp offchain data 1 cách _decentralized_, nên các gate nodes này sẽ là 1 mạng lưới được quản lý 1 cách decentralized và có incentive cho việc cung cấp data. Đối với mỗi node lại có 1 danh sách các datasources. Cùng 1 loại dữ liệu có thể có nhiều nguồn data để so sánh với nhau. Các nodes cũng như các datasources sẽ được đánh giá điểm tín nhiệm (reputation) bằng hệ thống sao (rating). Người đánh giá cần được verify bằng hệ thống digital identity của Icetea.
 
 Các thiết kế cụ thể của hệ thống decentralized gate nói trên sẽ được làm rõ hơn ở tài liệu khác.
 
