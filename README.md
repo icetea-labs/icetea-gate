@@ -48,6 +48,8 @@ const queryOpts = {
   condition: {
     datasources: 2, // at least 2 datasources agree
     reputation: 4, // only accept data sources with reputation >= 4 stars
+    conflict: 'reject', // what to do if conflict between datasources: reject, avarage
+    timeout: 10 // 10 blocks
   }
 }
 gate.query(queryOpts, 'myCallbackFunctionName', 'someValue')
@@ -75,7 +77,10 @@ Các thiết kế cụ thể của hệ thống decentralized gate nói trên s�
 
 ## Bản MVP
 
-Ở bản MVP thì chỉ cần 01 gate node và chạy được theo flow ở trên. Chưa cần có tính năng rating các nguồn data.
+Ở bản MVP thì chỉ cần 01 gate node và chạy được theo flow ở trên.
+- Phải xử lý được nhiều nguồn data
+- Chưa cần có tính năng rating các nguồn data
+- Phải phân biệt được data từ gate so với data không hợp lệ (vì method là public nên ai cũng gọi được, phải phân biệt được cái nào là valid dựa trên cơ chế register để lấy API_KEY hoặc như thế nào đó)
 Demo sẽ là 1 bot về dự đoán xổ số Miền Bắc hoặc dự đoán kết quả bóng đá.
 
 Thời gian demo MVP: __24 April__.
