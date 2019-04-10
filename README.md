@@ -59,6 +59,7 @@ Khi gọi `gate.query` bạn cần truyền thông tin về tên hàm nhận k�
 
 ```js
 myCallbackFunctionName(offchainData, callId) {
+   gate.verifyCaller(msg)
    if (callId === 'someValue') { // 'someValue' is passed when you call gate.query
      // do something with offchainData
    }
