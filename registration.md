@@ -1,8 +1,8 @@
 # Đăng kí
 
 1. Gate node đăng kí với gate contract
-2. Gate sinh ra số ngẫu nhiên (tương tự API_KEY)
-3. Key này lưu vào storage của contract và ko public ra
+2. Gate contract sinh ra số ngẫu nhiên (tương tự API_KEY)
+3. Key này lưu vào storage của gate contract và ko public ra
 4. Key được trả về cho gate node
 
 Khi gate node set data thì gửi kèm hash của (key & nonce). Nonce được tăng 1 sau mỗi lần và được lưu lại. Như vậy hash sẽ luôn thay đổi và không thể reuse bởi kẻ gian.
